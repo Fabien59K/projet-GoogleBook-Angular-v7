@@ -1,0 +1,36 @@
+
+header {
+    background-color: purple;
+    color: #FFF;
+    padding: 10px;
+    font-weight: bolder
+}
+header i {
+    cursor: pointer;
+}
+.menuBar {
+    height: 93%;
+    width: 250px;
+    border-right: 2px solid #ccc;
+    box-shadow: 0 8px 10px -5px rgba(0,0,0,.2), 0 16px 24px 2px rgba(0,0,0,.14), 0 6px 30px 5px rgba(0,0,0,.12);
+    position: absolute;
+    top: 50px;
+    background-color: #FFF;
+    padding: 10px;
+    z-index: 9999;
+}
+.menuBar a, .menuBar a:focus, .menuBar a:hover {
+    color: #000;
+    text-decoration: none
+}
+.menuBar span {
+    margin-left: 5px;
+    display: inline-block;
+}
+.menuBar i {
+    margin-top: 10px
+}
+.second-line {
+    font-size: 12px;
+    color: #ccc
+}

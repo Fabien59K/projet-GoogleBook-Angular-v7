@@ -1,0 +1,46 @@
+<div class="container">
+  <div class="row justify-content-center align-items-center">
+    <div class="col-6 book">
+      <div class="row">
+        <div class="col-9">
+          <div class="row">
+            <div class="col t">
+              {{book.volumeInfo.title}}
+            </div>
+          </div>
+          <div class="row" *ngIf="book.volumeInfo.subtitle != undefined">
+            <div class="col st">
+              {{book.volumeInfo.subtitle}}
+            </div>
+          </div>
+        </div>
+        <div class="col-3">
+          <img class="imageBook" *ngIf="book.volumeInfo.imageLinks.smallThumbnail != undefined"
+            src="{{book.volumeInfo.imageLinks.smallThumbnail}}" />
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          {{book.volumeInfo.description}}
+        </div>
+      </div>
+      <div class="row">
+        <div class="col" *ngIf="book.volumeInfo.authors != undefined">
+          <div class="row">
+            <div class="col"><strong>Written by :</strong></div>
+          </div>
+          <div class="row" *ngFor="let a of book.volumeInfo.authors">
+            <div class="col">
+              {{a}}
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <app-button-book [exists]="exist" (bookClick) = "bookCliked($event)"></app-button-book>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

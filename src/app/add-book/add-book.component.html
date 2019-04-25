@@ -1,0 +1,62 @@
+<div class="container">
+  <div class="row justify-content-center align-items-center">
+    <div class="col-6 book">
+      <div class="row">
+        <div class="col">
+          No book found, you can add it
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <form [formGroup]="formAdd" (ngSubmit)="AddBook()">
+            <div class="row">
+              <div class="col">
+                <fieldset class="form-group">
+                  <label class="bmd-label-floating" for="title">Title of the book</label>
+                  <input type="text" class="form-control" id="title" formControlName="title" />
+                </fieldset>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <fieldset class="form-group">
+                  <label class="bmd-label-floating" for="subTitle">sub Title of the book</label>
+                  <input type="text" class="form-control" id="subTitle" formControlName="subTitle" />
+                </fieldset>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <fieldset class="form-group">
+                  <label class="bmd-label-floating" for="urlImage">Image of the book</label>
+                  <input type="text" class="form-control" id="urlImage" formControlName="urlImage" />
+                </fieldset>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <fieldset class="form-group">
+                  <label class="bmd-label-floating" for="description">description of the book</label>
+                  <input type="text" class="form-control" id="description" formControlName="description" />
+                </fieldset>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <fieldset class="form-group">
+                  <label class="bmd-label-floating" for="author">author of the book</label>
+                  <input type="text" class="form-control" id="author" formControlName="author" />
+                </fieldset>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-6">
+                <button type="submit" class="btn btn-primary btn-raised">Add book</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

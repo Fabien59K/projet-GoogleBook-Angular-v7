@@ -1,0 +1,7 @@
+<div class="container">
+    <div class="row card-deck ">
+        <app-book *ngFor="let b of listBooks" [book]="b" class="col-4"></app-book>
+    </div>
+</div>
+<app-add-book *ngIf="listBooks != undefined && listBooks.length > 0"></app-add-book>
+

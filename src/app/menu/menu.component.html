@@ -1,0 +1,43 @@
+<header class="container-fluid">
+  <div class="row">
+    <div class="col-1">
+      <i class="material-icons" (click)="toggle()">
+        menu
+      </i>
+    </div>
+    <div class="col">
+      Book Collection
+    </div>
+  </div>
+</header>
+<div class="menuBar" *ngIf="show == true">
+  <a routerLink="/" (click)="toggle()">
+    <div class="row">
+      <div class="col-1"><i class="material-icons">book</i></div>
+      <div class="col">
+        <div class="row">
+          <div class="col"><span>My Collection</span></div>
+        </div>
+        <div class="row">
+          <div class="col"><span class="second-line">View your book collection</span></div>
+        </div>
+      </div>
+    </div>
+  </a>
+  <a routerLink="/search" (click)="toggle()">
+    <div>
+      
+    </div>
+    <div class="row">
+      <div class="col-1"><i class="material-icons">search</i></div>
+      <div class="col">
+        <div class="row">
+          <div class="col"><span>Browse books</span></div>
+        </div>
+        <div class="row">
+          <div class="col"><span class="second-line">Find your next book</span></div>
+        </div>
+      </div>
+    </div>
+  </a>
+</div>
